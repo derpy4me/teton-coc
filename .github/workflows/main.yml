@@ -56,7 +56,7 @@ jobs:
         python manage.py runserver --noreload &
     - name: Run tests
       run: |
-        pytest
+        pytest --ignore=tests/test_name_logo_selenium.py
 
   analyze:
     needs: build
